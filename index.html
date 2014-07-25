@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Graph Drawing</title>
+
+    <!--[if lt IE 9]>
+      <script src="../lib/excanvas.js"></script>
+    <![endif]-->
+
+    <script src="js/all.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/utils.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" src="js/MathJax.js"></script>
+  </head>
+  <body>
+
+    <div>
+      <canvas id="c" width="1000" height="1000" style="border:1px solid #ccc"></canvas>
+      <script id="main" src="js/graph-window.js"></script>
+    <table>
+	<tbody>
+	<tr>
+      <td><input id="vertex" type="button" onclick="setMode('vertex');" value="Create Vertices"></td>
+      <td><input id="edge" type="button" onclick="setMode('edge')" value="Create Edges"></td>
+      <td><input id="reposition" type="button" onclick="setMode('reposition')" value="Reposition Graph"></td>
+	</tr>
+	<tr>
+      <td><input id="delete" type="button" onclick="setMode('delete')" value="Delete Vertices"></td>
+      <td><input id="deleteEdge" type="button" onclick="setMode('deleteEdge')" value="Delete Edges"></td>
+      <td><input id="deleteLabel" type="button" onclick="setMode('deleteLabel')" value="Delete Labels"></td>
+	</tr>
+	<tr>
+      <td><input id="label" type="button" onclick="setMode('label')" value="Label Vertices"></td>
+      <td><input id="color" type="button" onclick="setMode('color')" value="Color Vertices"></td>
+	</tr>
+	</tbody>
+    </table>
+    </div>
+
+<!-- d3 js -->
+<!-- 
+	<script src="java/src/deployJava.js"></script>
+    <script> 
+        var attributes = {
+            code:'FM.Simple',  width:300, height:100} ; 
+        var parameters = {jnlp_href: 'java/FM.jnlp'} ; 
+        deployJava.runApplet(attributes, parameters, '1.6'); 
+    </script>
+ -->
+
+  </body>
+</html>
